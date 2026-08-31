@@ -127,7 +127,58 @@
       .store-badge{height:50px}
     }
 
-  </style>
+  
+    .stores{
+      display:flex;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:22px;
+    }
+    .store-badge-link{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      text-decoration:none;
+      line-height:0;
+    }
+    .store-badge{
+      display:block;
+      height:54px;
+      width:auto;
+      max-width:100%;
+      object-fit:contain;
+    }
+    @media(max-width:540px){
+      .store-badge{height:48px}
+    }
+
+</style>
+
+    <style>
+      .stores{
+        display:flex !important;
+        align-items:center !important;
+        flex-wrap:wrap !important;
+        gap:14px !important;
+      }
+      .store-badge-link{
+        display:inline-flex !important;
+        align-items:center !important;
+        justify-content:center !important;
+        line-height:0 !important;
+        background:transparent !important;
+        padding:0 !important;
+      }
+      .store-badge{
+        height:54px !important;
+        width:auto !important;
+        object-fit:contain !important;
+        background:transparent !important;
+        border:0 !important;
+      }
+    </style>
+    
 </head>
 <body>
 <header><div class="wrap"><nav><div class="brand">🐯🐐 Puli Meka</div><a class="navlink" href="#download">Download</a></nav></div></header>
@@ -154,7 +205,7 @@
            href="https://apps.apple.com/us/app/puli-meka-tigers-and-goats/id6803773732"
            aria-label="Download Puli Meka on the App Store">
           <img class="store-badge"
-               src="apple.svg"
+               src="apple.svg?v=3"
                alt="Download on the App Store">
         </a>
 
@@ -162,7 +213,7 @@
            href="https://play.google.com/store/apps/details?id=com.its7.aadu_puli"
            aria-label="Get Puli Meka on Google Play">
           <img class="store-badge"
-               src="googleplay.png"
+               src="googleplay-badge-v3.png"
                alt="Get it on Google Play">
         </a>
       </div>
