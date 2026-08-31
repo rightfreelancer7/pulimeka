@@ -3,756 +3,201 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#fff8ee">
 
-  <title>Puli Meka - Tigers and Goats</title>
-  <meta name="description"
-        content="Puli Meka - Tigers and Goats is a classic South Indian strategy board game. Three tigers face fifteen goats. Available for iPhone and Android.">
+  <title>Puli Meka - Tigers and Goats Strategy Board Game | Aadu Puli Aattam</title>
+  <meta name="description" content="Play Puli Meka, the traditional Tigers and Goats strategy board game. Also known as Aadu Puli Aattam, Aadu Huli Aata, Puli Joodam and Lambs and Tigers. Available for iPhone and Android.">
+  <meta name="keywords" content="Puli Meka, Pulimeka, Puli-Meka, Tigers and Goats, Tiger and Goats, Goats and Tigers, Tiger Goat game, Tigers Goats game, goat tiger game, board game, strategy board game, traditional board game, Indian board game, South Indian board game, Telugu board game, Tamil board game, Kannada board game, Aadu Puli Aattam, Aadu Puli Attam, Aadupuli Attam, Aadu Puli game, Aadu Huli Aata, Aadu Huli Ata, Puli Joodam, Pulijudam, Lambs and Tigers, tiger goat strategy game, asymmetric board game, two player strategy game, brain game, mind game, thinking game, logic game, tactical game, puzzle strategy game, family board game, classic board game, traditional Indian game, Android board game, iPhone board game, mobile board game, play against AI, tiger capture goats, trap the tigers, strategy game for adults, strategy game for kids">
+
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="https://rightfreelancer7.github.io/pulimeka/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Puli Meka - Tigers and Goats Strategy Game">
+  <meta property="og:description" content="A traditional South Indian Tigers and Goats strategy board game for iPhone and Android.">
+  <meta property="og:url" content="https://rightfreelancer7.github.io/pulimeka/">
+  <meta property="og:site_name" content="Puli Meka">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Puli Meka - Tigers and Goats">
+  <meta name="twitter:description" content="Play the classic Tigers and Goats strategy board game on iPhone and Android.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Puli Meka - Tigers and Goats",
+    "alternateName": [
+      "Puli Meka",
+      "Pulimeka",
+      "Aadu Puli Aattam",
+      "Aadu Puli Attam",
+      "Aadu Huli Aata",
+      "Puli Joodam",
+      "Pulijudam",
+      "Lambs and Tigers",
+      "Tigers and Goats"
+    ],
+    "applicationCategory": "GameApplication",
+    "operatingSystem": "Android, iOS",
+    "description": "A mobile version of the traditional South Indian Tigers and Goats strategy board game. Three tigers face fifteen goats in an asymmetric strategy game.",
+    "url": "https://rightfreelancer7.github.io/pulimeka/",
+    "downloadUrl": [
+      "https://apps.apple.com/us/app/puli-meka-tigers-and-goats/id6803773732",
+      "https://play.google.com/store/apps/details?id=com.its7.aadu_puli"
+    ],
+    "keywords": "Puli Meka, Tigers and Goats, Aadu Puli Aattam, Aadu Huli Aata, Puli Joodam, Pulijudam, Lambs and Tigers, strategy board game, traditional Indian board game, brain game, thinking game"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"What is Puli Meka?",
+        "acceptedAnswer":{"@type":"Answer","text":"Puli Meka is a traditional South Indian asymmetric strategy board game in which three tigers face fifteen goats."}
+      },
+      {
+        "@type":"Question",
+        "name":"What are other names for Puli Meka?",
+        "acceptedAnswer":{"@type":"Answer","text":"The game is also known by names such as Aadu Puli Aattam, Aadu Huli Aata, Puli Joodam or Pulijudam, Lambs and Tigers, and Tigers and Goats."}
+      },
+      {
+        "@type":"Question",
+        "name":"Is Puli Meka a brain or thinking game?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes. Puli Meka is a strategy and thinking game built around planning, positioning, trapping and tactical decisions."}
+      },
+      {
+        "@type":"Question",
+        "name":"Can I play Puli Meka on Android and iPhone?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes. Puli Meka is available through Google Play for Android and the Apple App Store for iPhone and iPad."}
+      }
+    ]
+  }
+  </script>
 
   <style>
-    :root{
-      --bg:#fff8ee;
-      --bg2:#f6ead9;
-      --card:#ffffff;
-      --ink:#2b211b;
-      --muted:#74685e;
-      --tiger:#c95139;
-      --goat:#4b8559;
-      --gold:#d2a24f;
-      --line:rgba(70,50,35,.13);
-      --shadow:0 20px 50px rgba(71,47,30,.14);
-    }
-
+    :root{--bg:#fff8ef;--ink:#2c231d;--muted:#75685e;--red:#b64735;--green:#4d8055;--gold:#c69b49;--line:rgba(66,47,33,.14)}
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-
-    body{
-      margin:0;
-      color:var(--ink);
-      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-      background:
-        radial-gradient(circle at 8% 7%, rgba(201,81,57,.10), transparent 28%),
-        radial-gradient(circle at 92% 10%, rgba(75,133,89,.10), transparent 28%),
-        linear-gradient(180deg,var(--bg),var(--bg2));
-    }
-
-    .wrap{
-      width:min(1140px,calc(100% - 34px));
-      margin:auto;
-    }
-
-    header{
-      padding:18px 0;
-      border-bottom:1px solid var(--line);
-      background:rgba(255,248,238,.88);
-      backdrop-filter:blur(10px);
-      position:sticky;
-      top:0;
-      z-index:50;
-    }
-
-    nav{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-    }
-
-    .brand{
-      display:flex;
-      gap:12px;
-      align-items:center;
-      font-weight:850;
-      font-size:18px;
-    }
-
-    #appIcon{
-      width:46px;
-      height:46px;
-      border-radius:12px;
-      object-fit:cover;
-      box-shadow:0 8px 20px rgba(0,0,0,.16);
-      background:linear-gradient(135deg,var(--tiger),var(--goat));
-    }
-
-    .navDownload{
-      color:var(--ink);
-      text-decoration:none;
-      font-size:14px;
-      font-weight:700;
-    }
-
-    .hero{
-      padding:66px 0 46px;
-      display:grid;
-      grid-template-columns:1.02fr .98fr;
-      align-items:center;
-      gap:45px;
-    }
-
-    .eyebrow{
-      display:inline-block;
-      padding:8px 13px;
-      border-radius:999px;
-      border:1px solid rgba(210,162,79,.36);
-      background:rgba(210,162,79,.13);
-      color:#75541e;
-      font-size:12px;
-      font-weight:850;
-      letter-spacing:.08em;
-      margin-bottom:17px;
-    }
-
-    h1{
-      margin:0;
-      font-size:clamp(46px,7.3vw,78px);
-      line-height:.98;
-      letter-spacing:-3px;
-    }
-
-    .heroText{
-      font-size:18px;
-      line-height:1.65;
-      color:var(--muted);
-      max-width:650px;
-      margin:23px 0 11px;
-    }
-
-    .gameRule{
-      color:#594b41;
-      font-weight:700;
-      margin:0 0 25px;
-      line-height:1.55;
-    }
-
-    .storeRow{
-      display:flex;
-      flex-wrap:wrap;
-      gap:13px;
-      margin-top:18px;
-    }
-
-    .storeButton{
-      min-width:235px;
-      min-height:70px;
-      border-radius:16px;
-      padding:11px 18px;
-      background:#111;
-      color:white;
-      text-decoration:none;
-      display:flex;
-      align-items:center;
-      gap:13px;
-      box-shadow:0 13px 30px rgba(0,0,0,.18);
-      transition:.18s ease;
-    }
-
-    .storeButton:hover{
-      transform:translateY(-3px);
-    }
-
-    .storeIcon{
-      font-size:29px;
-      width:34px;
-      text-align:center;
-    }
-
-    .storeText small{
-      display:block;
-      font-size:10px;
-      text-transform:uppercase;
-      opacity:.72;
-      letter-spacing:.08em;
-    }
-
-    .storeText strong{
-      display:block;
-      font-size:19px;
-      margin-top:2px;
-    }
-
-    #deviceNote{
-      color:var(--muted);
-      margin-top:15px;
-      font-size:13px;
-    }
-
-    .heroImageBox{
-      background:rgba(255,255,255,.70);
-      border:1px solid var(--line);
-      border-radius:30px;
-      padding:20px;
-      box-shadow:var(--shadow);
-      min-height:520px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      overflow:hidden;
-    }
-
-    #heroScreenshot{
-      width:100%;
-      max-height:600px;
-      object-fit:contain;
-      border-radius:20px;
-      display:none;
-      filter:drop-shadow(0 14px 20px rgba(0,0,0,.18));
-    }
-
-    .loadingArtwork{
-      text-align:center;
-      color:var(--muted);
-      padding:30px;
-    }
-
-    .loadingArtwork img{
-      width:110px;
-      height:110px;
-      border-radius:24px;
-      display:block;
-      margin:0 auto 18px;
-      background:linear-gradient(135deg,var(--tiger),var(--goat));
-      box-shadow:0 14px 30px rgba(0,0,0,.18);
-    }
-
-    .featuresSection{
-      padding:60px 0 38px;
-    }
-
-    .sectionHead{
-      max-width:760px;
-      margin-bottom:28px;
-    }
-
-    .sectionHead h2{
-      font-size:clamp(31px,5vw,45px);
-      margin:0 0 10px;
-      letter-spacing:-1.4px;
-    }
-
-    .sectionHead p{
-      margin:0;
-      color:var(--muted);
-      font-size:16px;
-      line-height:1.65;
-    }
-
-    .features{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:17px;
-    }
-
-    .feature{
-      padding:23px;
-      background:rgba(255,255,255,.7);
-      border:1px solid var(--line);
-      border-radius:21px;
-      box-shadow:0 10px 30px rgba(71,47,30,.05);
-    }
-
-    .featureIcon{
-      font-size:29px;
-      margin-bottom:12px;
-    }
-
-    .feature h3{
-      margin:0 0 8px;
-      font-size:18px;
-    }
-
-    .feature p{
-      margin:0;
-      color:var(--muted);
-      font-size:14px;
-      line-height:1.55;
-    }
-
-    .gallerySection{
-      padding:45px 0 68px;
-    }
-
-    .gallery{
-      display:grid;
-      grid-auto-flow:column;
-      grid-auto-columns:minmax(220px,290px);
-      gap:18px;
-      overflow-x:auto;
-      padding:6px 4px 22px;
-      scrollbar-width:thin;
-      scroll-snap-type:x mandatory;
-    }
-
-    .shot{
-      background:white;
-      border:1px solid var(--line);
-      border-radius:23px;
-      padding:9px;
-      box-shadow:0 14px 35px rgba(71,47,30,.10);
-      scroll-snap-align:start;
-    }
-
-    .shot img{
-      width:100%;
-      height:auto;
-      border-radius:16px;
-      display:block;
-    }
-
-    .galleryMessage{
-      color:var(--muted);
-      padding:20px 0;
-    }
-
-    .cta{
-      margin:0 0 70px;
-      text-align:center;
-      border:1px solid var(--line);
-      border-radius:28px;
-      padding:38px 22px;
-      background:
-        linear-gradient(135deg,rgba(201,81,57,.09),rgba(75,133,89,.09)),
-        rgba(255,255,255,.72);
-      box-shadow:var(--shadow);
-    }
-
-    .cta h2{
-      margin:0 0 9px;
-      font-size:34px;
-    }
-
-    .cta p{
-      margin:0 0 22px;
-      color:var(--muted);
-    }
-
-    .cta .storeRow{
-      justify-content:center;
-    }
-
-    footer{
-      border-top:1px solid var(--line);
-      text-align:center;
-      padding:26px 0 36px;
-      color:#83776c;
-      font-size:13px;
-    }
-
-    .redirectOverlay{
-      display:none;
-      position:fixed;
-      z-index:9999;
-      inset:0;
-      background:linear-gradient(180deg,#fff8ee,#f2e4d2);
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      padding:22px;
-    }
-
-    .redirectCard{
-      max-width:440px;
-      width:100%;
-      background:white;
-      border:1px solid var(--line);
-      border-radius:27px;
-      padding:32px 24px;
-      box-shadow:var(--shadow);
-    }
-
-    .redirectCard img{
-      width:92px;
-      height:92px;
-      border-radius:21px;
-      object-fit:cover;
-      background:linear-gradient(135deg,var(--tiger),var(--goat));
-      margin-bottom:14px;
-    }
-
-    .redirectCard h2{
-      margin:0 0 9px;
-      font-size:28px;
-    }
-
-    .redirectCard p{
-      color:var(--muted);
-      line-height:1.55;
-      margin:0 0 18px;
-    }
-
-    #fallbackButton{
-      display:inline-flex;
-      min-width:220px;
-      min-height:52px;
-      align-items:center;
-      justify-content:center;
-      background:#111;
-      color:#fff;
-      border-radius:14px;
-      text-decoration:none;
-      font-weight:800;
-    }
-
-    .sourceNote{
-      margin-top:12px;
-      font-size:12px;
-      color:#8a7e74;
-    }
-
-    @media(max-width:840px){
-      .hero{grid-template-columns:1fr;padding-top:40px}
-      .heroImageBox{min-height:360px}
-      .features{grid-template-columns:1fr}
-    }
-
-    @media(max-width:550px){
-      .wrap{width:min(100% - 22px,1140px)}
-      .storeRow{flex-direction:column}
-      .storeButton{width:100%;min-width:0}
-      h1{letter-spacing:-2px}
-      .hero{gap:27px}
-    }
+    body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:linear-gradient(180deg,#fffaf3,#f5e9d9)}
+    .wrap{width:min(1120px,calc(100% - 34px));margin:auto}
+    header{padding:20px 0;border-bottom:1px solid var(--line);background:rgba(255,250,243,.9);position:sticky;top:0;z-index:10;backdrop-filter:blur(10px)}
+    nav{display:flex;justify-content:space-between;align-items:center}.brand{font-weight:900;font-size:19px}.navlink{text-decoration:none;color:var(--ink);font-weight:700}
+    .hero{padding:65px 0 40px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+    .tag{display:inline-block;padding:8px 13px;border-radius:999px;background:rgba(198,155,73,.14);border:1px solid rgba(198,155,73,.32);font-weight:800;font-size:12px;letter-spacing:.06em}
+    h1{font-size:clamp(45px,7vw,75px);line-height:1;letter-spacing:-3px;margin:17px 0}
+    .lead{font-size:18px;line-height:1.7;color:var(--muted)}
+    .stores{display:flex;flex-wrap:wrap;gap:13px;margin-top:22px}
+    .btn{display:flex;align-items:center;gap:12px;min-width:230px;background:#111;color:#fff;text-decoration:none;padding:13px 17px;border-radius:16px;box-shadow:0 12px 28px rgba(0,0,0,.16)}
+    .btn span{font-size:28px}.btn small{display:block;opacity:.7}.btn strong{display:block;font-size:18px}
+    .visual{background:#fff;border:1px solid var(--line);border-radius:28px;padding:20px;box-shadow:0 20px 55px rgba(70,50,35,.13)}
+    #appShot{width:100%;max-height:620px;object-fit:contain;border-radius:18px;display:none}
+    #appIcon{width:110px;height:110px;border-radius:24px;display:block;margin:20px auto;object-fit:cover}
+    section{padding:55px 0}.sectionTitle{font-size:38px;letter-spacing:-1px;margin:0 0 12px}.sub{color:var(--muted);line-height:1.7;max-width:800px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+    .card{background:rgba(255,255,255,.75);border:1px solid var(--line);border-radius:20px;padding:22px}.card h3{margin-top:0}.card p{color:var(--muted);line-height:1.55}
+    .seoText{background:rgba(255,255,255,.7);border:1px solid var(--line);border-radius:24px;padding:26px;line-height:1.75;color:#544a43}
+    .faq details{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;margin:10px 0}.faq summary{font-weight:800;cursor:pointer}.faq p{color:var(--muted);line-height:1.6}
+    footer{padding:28px 0 40px;text-align:center;color:#84786e;border-top:1px solid var(--line)}
+    @media(max-width:820px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}}
+    @media(max-width:540px){.stores{flex-direction:column}.btn{width:100%;min-width:0}}
   </style>
 </head>
-
 <body>
-
-<div class="redirectOverlay" id="redirectOverlay">
-  <div class="redirectCard">
-    <img id="redirectIcon" alt="Puli Meka app icon">
-    <h2>Opening Puli Meka…</h2>
-    <p id="redirectMessage">
-      Taking you to the correct app store. If the store does not open automatically,
-      tap the button below.
-    </p>
-    <a id="fallbackButton" href="#">Open App Store</a>
-  </div>
-</div>
-
-<header>
-  <div class="wrap">
-    <nav>
-      <div class="brand">
-        <img id="appIcon" alt="Puli Meka app icon">
-        <span>Puli Meka</span>
-      </div>
-      <a class="navDownload" href="#download">Download</a>
-    </nav>
-  </div>
-</header>
+<header><div class="wrap"><nav><div class="brand">🐯🐐 Puli Meka</div><a class="navlink" href="#download">Download</a></nav></div></header>
 
 <main>
-
   <div class="wrap hero">
     <div>
-      <div class="eyebrow">CLASSIC SOUTH INDIAN STRATEGY GAME</div>
-
-      <h1>Tigers.<br>Goats.<br>Strategy.</h1>
-
-      <p class="heroText">
-        Puli Meka (Tigers and Goats) brings the traditional strategy board game
-        to your phone. Plan every move carefully and outsmart the opposing side.
+      <div class="tag">TIGERS & GOATS STRATEGY BOARD GAME</div>
+      <h1>Puli Meka</h1>
+      <p class="lead">
+        Play <strong>Puli Meka</strong>, the traditional <strong>Tigers and Goats</strong> strategy game.
+        Three tigers use strength and captures while fifteen goats use teamwork, positioning and blocking.
+        It is a classic two-sided board game of planning, logic, tactical thinking and mind strategy.
       </p>
-
-      <p class="gameRule">
-        Three tigers face fifteen goats. Tigers capture goats; goats work together
-        to block every tiger move.
+      <p class="lead">
+        Depending on region and language, players may know this family of games as
+        <strong>Aadu Puli Aattam</strong>, <strong>Aadu Puli Attam</strong>,
+        <strong>Aadu Huli Aata</strong>, <strong>Puli Joodam</strong>,
+        <strong>Pulijudam</strong>, <strong>Lambs and Tigers</strong>,
+        <strong>Tigers and Goats</strong> or a tiger-and-goat board game.
       </p>
-
-      <div class="storeRow" id="download">
-        <a class="storeButton"
-           href="https://apps.apple.com/us/app/puli-meka-tigers-and-goats/id6803773732">
-          <div class="storeIcon"></div>
-          <div class="storeText">
-            <small>Download on the</small>
-            <strong>App Store</strong>
-          </div>
-        </a>
-
-        <a class="storeButton"
-           href="https://play.google.com/store/apps/details?id=com.its7.aadu_puli">
-          <div class="storeIcon">▶</div>
-          <div class="storeText">
-            <small>Get it on</small>
-            <strong>Google Play</strong>
-          </div>
-        </a>
-      </div>
-
-      <div id="deviceNote">
-        On a phone, this page attempts to open the matching app store automatically.
+      <div class="stores" id="download">
+        <a class="btn" href="https://apps.apple.com/us/app/puli-meka-tigers-and-goats/id6803773732"><span></span><div><small>Download on the</small><strong>App Store</strong></div></a>
+        <a class="btn" href="https://play.google.com/store/apps/details?id=com.its7.aadu_puli"><span>▶</span><div><small>Get it on</small><strong>Google Play</strong></div></a>
       </div>
     </div>
 
-    <div class="heroImageBox">
-      <img id="heroScreenshot" alt="Puli Meka game screenshot">
-      <div class="loadingArtwork" id="artLoading">
-        <img id="loadingIcon" alt="">
-        <strong>Loading official Puli Meka artwork…</strong>
-        <div class="sourceNote">Images are loaded from the live Apple App Store metadata.</div>
-      </div>
+    <div class="visual">
+      <img id="appShot" alt="Puli Meka Tigers and Goats strategy board game screenshot">
+      <img id="appIcon" alt="Puli Meka Tigers and Goats app icon">
+      <p id="imageStatus" style="text-align:center;color:#75685e">Loading official App Store artwork…</p>
     </div>
   </div>
 
-  <section class="featuresSection">
+  <section>
     <div class="wrap">
-      <div class="sectionHead">
-        <h2>A classic battle of strength and strategy.</h2>
-        <p>
-          Play the traditional Tigers and Goats board game with a clean mobile
-          experience and computer opponent.
-        </p>
-      </div>
-
-      <div class="features">
-        <div class="feature">
-          <div class="featureIcon">🐯</div>
-          <h3>Three Tigers</h3>
-          <p>
-            Tigers move around the board and capture goats by using strategic jumps.
-          </p>
-        </div>
-
-        <div class="feature">
-          <div class="featureIcon">🐐</div>
-          <h3>Fifteen Goats</h3>
-          <p>
-            Goats use their numbers and positioning to restrict and eventually trap the tigers.
-          </p>
-        </div>
-
-        <div class="feature">
-          <div class="featureIcon">🤖</div>
-          <h3>Play Against AI</h3>
-          <p>
-            Challenge the computer and improve your planning and board strategy.
-          </p>
-        </div>
-
-        <div class="feature">
-          <div class="featureIcon">🧠</div>
-          <h3>Simple Rules, Deep Strategy</h3>
-          <p>
-            Each move changes the balance of the board. Think ahead before committing.
-          </p>
-        </div>
-
-        <div class="feature">
-          <div class="featureIcon">📱</div>
-          <h3>Made for Mobile</h3>
-          <p>
-            Enjoy a traditional South Indian board game from your iPhone, iPad, or Android device.
-          </p>
-        </div>
-
-        <div class="feature">
-          <div class="featureIcon">🎯</div>
-          <h3>Different Objectives</h3>
-          <p>
-            Tigers focus on captures while goats focus on blocking and controlling space.
-          </p>
-        </div>
+      <h2 class="sectionTitle">A brain game built around strategy and positioning</h2>
+      <p class="sub">Puli Meka is suitable for players looking for a traditional board game, thinking game, logic game, tactical game, family strategy game or mind-challenging mobile game.</p>
+      <div class="grid">
+        <div class="card"><h3>🐯 Tigers</h3><p>Use movement and captures to reduce the goats and keep escape routes open.</p></div>
+        <div class="card"><h3>🐐 Goats</h3><p>Use numbers, careful placement and teamwork to restrict the tigers and control the board.</p></div>
+        <div class="card"><h3>🧠 Thinking & Strategy</h3><p>Plan ahead, evaluate threats, protect key positions and anticipate the opponent's next move.</p></div>
+        <div class="card"><h3>🎯 Tactical Board Play</h3><p>Every move affects future options, making the game useful for players who enjoy strategy, puzzles and logic.</p></div>
+        <div class="card"><h3>📱 Mobile Board Game</h3><p>Enjoy the classic Tigers and Goats game on iPhone, iPad and Android devices.</p></div>
+        <div class="card"><h3>🤖 AI Challenge</h3><p>Practice your tiger-and-goat strategy against a computer opponent and improve through repeated play.</p></div>
       </div>
     </div>
   </section>
 
-  <section class="gallerySection">
+  <section>
     <div class="wrap">
-      <div class="sectionHead">
-        <h2>See the actual game.</h2>
-        <p>
-          These screenshots are loaded from the official Puli Meka App Store listing,
-          rather than recreated artwork.
-        </p>
-      </div>
-
-      <div id="gallery" class="gallery">
-        <div class="galleryMessage" id="galleryMessage">
-          Loading official screenshots…
-        </div>
+      <h2 class="sectionTitle">What people may search for</h2>
+      <div class="seoText">
+        If you are searching for a <strong>Puli Meka game</strong>, <strong>Pulimeka game</strong>,
+        <strong>Tigers and Goats game</strong>, <strong>Tiger and Goat game</strong>,
+        <strong>Goats and Tigers board game</strong>, <strong>Aadu Puli game</strong>,
+        <strong>Aadu Puli Aattam</strong>, <strong>Aadupuli Attam</strong>,
+        <strong>Aadu Huli Aata</strong>, <strong>Puli Joodam</strong>, <strong>Pulijudam</strong>,
+        <strong>Lambs and Tigers</strong>, <strong>traditional Indian board game</strong>,
+        <strong>South Indian strategy game</strong>, <strong>Telugu board game</strong>,
+        <strong>Tamil strategy game</strong>, <strong>Kannada board game</strong>,
+        <strong>two-player strategy game</strong>, <strong>brain game</strong>,
+        <strong>mind game</strong>, <strong>thinking game</strong>, <strong>logic game</strong>,
+        <strong>tactical board game</strong> or <strong>classic mobile board game</strong>,
+        Puli Meka is designed around this traditional asymmetric tiger-versus-goat style of play.
       </div>
     </div>
   </section>
 
-  <div class="wrap">
-    <div class="cta">
-      <h2>Can you outsmart the other side?</h2>
-      <p>Download Puli Meka and start your next match.</p>
-
-      <div class="storeRow">
-        <a class="storeButton"
-           href="https://apps.apple.com/us/app/puli-meka-tigers-and-goats/id6803773732">
-          <div class="storeIcon"></div>
-          <div class="storeText">
-            <small>Download on the</small>
-            <strong>App Store</strong>
-          </div>
-        </a>
-
-        <a class="storeButton"
-           href="https://play.google.com/store/apps/details?id=com.its7.aadu_puli">
-          <div class="storeIcon">▶</div>
-          <div class="storeText">
-            <small>Get it on</small>
-            <strong>Google Play</strong>
-          </div>
-        </a>
-      </div>
+  <section class="faq">
+    <div class="wrap">
+      <h2 class="sectionTitle">Puli Meka FAQ</h2>
+      <details><summary>What is Puli Meka?</summary><p>Puli Meka is a traditional South Indian strategy board game in which three tigers face fifteen goats. The two sides have different strengths and objectives.</p></details>
+      <details><summary>What other names are used for the Tigers and Goats game?</summary><p>Common regional or English names include Aadu Puli Aattam, Aadu Puli Attam, Aadu Huli Aata, Puli Joodam, Pulijudam, Lambs and Tigers, Tigers and Goats, and Goats and Tigers.</p></details>
+      <details><summary>Is Puli Meka the same as Bagh-Chal?</summary><p>They belong to a related family of asymmetric hunt games, but board layouts, piece counts and rules can differ. This page describes Puli Meka rather than treating every regional variant as identical.</p></details>
+      <details><summary>Is Puli Meka a brain game?</summary><p>It is a strategy and thinking game that emphasizes planning, positioning, pattern recognition and tactical decisions.</p></details>
     </div>
-  </div>
-
+  </section>
 </main>
 
-<footer>
-  <div class="wrap">
-    © 2026 ITS7 · Puli Meka - Tigers and Goats
-  </div>
-</footer>
+<footer><div class="wrap">© 2026 ITS7 · Puli Meka - Tigers and Goats</div></footer>
 
 <script>
-  const IOS_URL =
-    "https://apps.apple.com/us/app/puli-meka-tigers-and-goats/id6803773732";
-
-  const ANDROID_URL =
-    "https://play.google.com/store/apps/details?id=com.its7.aadu_puli";
-
-  /*
-   * Apple's public iTunes Lookup endpoint returns the live App Store
-   * artwork URL and screenshotUrls for this exact App Store ID.
-   *
-   * This means the landing page displays the actual listing images,
-   * not placeholder art copied into this HTML file.
-   */
-  const APPLE_LOOKUP =
-    "https://itunes.apple.com/lookup?id=6803773732&country=us";
-
-  async function loadOfficialArtwork() {
-    const appIcon = document.getElementById("appIcon");
-    const loadingIcon = document.getElementById("loadingIcon");
-    const redirectIcon = document.getElementById("redirectIcon");
-    const hero = document.getElementById("heroScreenshot");
-    const loading = document.getElementById("artLoading");
-    const gallery = document.getElementById("gallery");
-    const message = document.getElementById("galleryMessage");
-
-    try {
-      const response = await fetch(APPLE_LOOKUP);
-      if (!response.ok) throw new Error("Apple lookup failed");
-
-      const json = await response.json();
-      if (!json.results || !json.results.length) {
-        throw new Error("No App Store record returned");
-      }
-
-      const app = json.results[0];
-
-      if (app.artworkUrl512) {
-        appIcon.src = app.artworkUrl512;
-        loadingIcon.src = app.artworkUrl512;
-        redirectIcon.src = app.artworkUrl512;
-      }
-
-      let screenshots = [];
-
-      if (Array.isArray(app.screenshotUrls)) {
-        screenshots = screenshots.concat(app.screenshotUrls);
-      }
-
-      if (Array.isArray(app.ipadScreenshotUrls)) {
-        screenshots = screenshots.concat(app.ipadScreenshotUrls);
-      }
-
-      // Remove duplicates.
-      screenshots = [...new Set(screenshots)];
-
-      if (screenshots.length > 0) {
-        hero.src = screenshots[0];
-        hero.style.display = "block";
-        loading.style.display = "none";
-
-        gallery.innerHTML = "";
-
-        screenshots.slice(0, 8).forEach((url, index) => {
-          const card = document.createElement("div");
-          card.className = "shot";
-
-          const img = document.createElement("img");
-          img.src = url;
-          img.alt = "Official Puli Meka App Store screenshot " + (index + 1);
-          img.loading = "lazy";
-
-          card.appendChild(img);
-          gallery.appendChild(card);
-        });
-      } else {
-        message.textContent =
-          "The App Store record loaded, but Apple did not return screenshot URLs to this browser.";
-        loading.innerHTML =
-          "<strong>Official app artwork loaded.</strong><div class='sourceNote'>Use the App Store button to see the complete live listing.</div>";
-      }
-
-    } catch (error) {
-      console.log(error);
-
-      message.textContent =
-        "Official screenshots could not be loaded in this browser. Use the App Store button to view them.";
-
-      loading.innerHTML =
-        "<div style='font-size:64px;margin-bottom:14px'>🐯 🐐</div>" +
-        "<strong>Puli Meka - Tigers and Goats</strong>" +
-        "<div class='sourceNote'>The store links below remain available.</div>";
-    }
-  }
-
-  function isInAppBrowser(ua) {
-    return /FBAN|FBAV|Instagram|WhatsApp|wv|Line|Twitter/i.test(ua);
-  }
-
-  function redirectToStore() {
-    const ua = navigator.userAgent || navigator.vendor || window.opera || "";
-
-    const android = /android/i.test(ua);
-
-    const ios =
-      /iPad|iPhone|iPod/i.test(ua) ||
-      (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
-
-    const overlay = document.getElementById("redirectOverlay");
-    const message = document.getElementById("redirectMessage");
-    const button = document.getElementById("fallbackButton");
-
-    if (android) {
-      overlay.style.display = "flex";
-      message.textContent =
-        "Opening Puli Meka in Google Play. If WhatsApp or another in-app browser blocks the redirect, tap below.";
-      button.textContent = "Open Google Play";
-      button.href = ANDROID_URL;
-
-      setTimeout(function() {
-        window.location.href = ANDROID_URL;
-      }, 850);
-
-      return;
-    }
-
-    if (ios) {
-      overlay.style.display = "flex";
-      message.textContent =
-        "Opening Puli Meka in the App Store. If WhatsApp or another in-app browser blocks the redirect, tap below.";
-      button.textContent = "Open App Store";
-      button.href = IOS_URL;
-
-      setTimeout(function() {
-        window.location.href = IOS_URL;
-      }, 850);
-
-      return;
-    }
-  }
-
-  loadOfficialArtwork();
-  window.addEventListener("load", redirectToStore);
+const APPLE_LOOKUP="https://itunes.apple.com/lookup?id=6803773732&country=us";
+fetch(APPLE_LOOKUP).then(r=>r.json()).then(data=>{
+  if(!data.results || !data.results.length) return;
+  const app=data.results[0];
+  const icon=document.getElementById("appIcon");
+  const shot=document.getElementById("appShot");
+  const status=document.getElementById("imageStatus");
+  if(app.artworkUrl512) icon.src=app.artworkUrl512;
+  const shots=[...(app.screenshotUrls||[]),...(app.ipadScreenshotUrls||[])];
+  if(shots.length){shot.src=shots[0];shot.style.display="block";icon.style.display="none";status.style.display="none";}
+}).catch(()=>{document.getElementById("imageStatus").textContent="Use the store buttons to view the official screenshots.";});
 </script>
-
 </body>
 </html>
