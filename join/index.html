@@ -52,13 +52,16 @@
     if (isApple) {
       store.href = 'https://apps.apple.com/us/app/puli-meka-tigers-and-goats/id6803773732';
       store.textContent = 'Get Puli Meka on the App Store';
-      status.textContent = 'After installing, open Join Room and enter the code above.';
+      status.textContent = 'Opening the App Store… After installing, enter the code above in Join Room.';
     } else if (isAndroid) {
       store.href = 'https://play.google.com/store/apps/details?id=com.its7.aadu_puli';
       store.textContent = 'Get Puli Meka on Google Play';
-      status.textContent = 'After installing, open Join Room and enter the code above.';
+      status.textContent = 'Opening Google Play… After installing, enter the code above in Join Room.';
     } else {
       status.textContent = 'Choose your device on the download page, then enter the code in Join Room.';
+    }
+    if (isApple || isAndroid) {
+      setTimeout(() => location.replace(store.href), 700);
     }
   </script>
 </body>
