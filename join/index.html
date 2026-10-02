@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Join a Puli Meka Game</title>
+  <meta name="description" content="Install Puli Meka and join a multiplayer game.">
+  <style>
+    :root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#2c231d;background:#fff8ef}
+    body{display:grid;min-height:100vh;place-items:center;margin:0;padding:24px;box-sizing:border-box}
+    main{width:min(440px,100%);padding:32px 24px;text-align:center;background:#fff;border:1px solid #eadcc9;border-radius:22px;box-shadow:0 14px 36px #5b40251c}
+    h1{margin:0 0 10px;font-size:28px}.muted{color:#75685e;line-height:1.55}
+    .code{display:inline-block;margin:18px 0;padding:12px 18px;border-radius:12px;background:#f5e9d9;font-size:30px;letter-spacing:5px;font-weight:900}
+    a,button{display:block;width:100%;box-sizing:border-box;margin-top:12px;padding:13px 16px;border:0;border-radius:10px;font:inherit;font-weight:800;text-decoration:none;cursor:pointer}
+    a{background:#4d8055;color:#fff}button{background:#efe2cf;color:#2c231d}
+    #status{margin-top:18px;font-size:14px}.hidden{display:none}
+  </style>
+</head>
+<body>
+  <main>
+    <div aria-hidden="true" style="font-size:42px">🐯🐐</div>
+    <h1>Join Puli Meka</h1>
+    <p class="muted">Your room code is ready. Install Puli Meka, then choose Join Room and enter this code.</p>
+    <div id="room" class="code">------</div>
+    <button id="copy" type="button">Copy room code</button>
+    <a id="store" href="https://rightfreelancer7.github.io/pulimeka/">Open download page</a>
+    <p id="status" class="muted">Preparing the correct download link…</p>
+  </main>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const room = (params.get('room') || '').trim().toUpperCase();
+    const validRoom = /^[A-Z2-9]{6}$/.test(room);
+    const roomElement = document.getElementById('room');
+    const copyButton = document.getElementById('copy');
+    const store = document.getElementById('store');
+    const status = document.getElementById('status');
+    roomElement.textContent = validRoom ? room : '------';
+    copyButton.disabled = !validRoom;
+    copyButton.addEventListener('click', async () => {
+      if (!validRoom) return;
+      try {
+        await navigator.clipboard.writeText(room);
+        copyButton.textContent = 'Room code copied';
+      } catch (_) {
+        copyButton.textContent = 'Room code: ' + room;
+      }
+    });
+    const agent = navigator.userAgent || '';
+    const isApple = /iPhone|iPad|iPod/i.test(agent) ||
+      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    const isAndroid = /Android/i.test(agent);
+    if (isApple) {
+      store.href = 'https://apps.apple.com/us/app/puli-meka-tigers-and-goats/id6803773732';
+      store.textContent = 'Get Puli Meka on the App Store';
+      status.textContent = 'After installing, open Join Room and enter the code above.';
+    } else if (isAndroid) {
+      store.href = 'https://play.google.com/store/apps/details?id=com.its7.aadu_puli';
+      store.textContent = 'Get Puli Meka on Google Play';
+      status.textContent = 'After installing, open Join Room and enter the code above.';
+    } else {
+      status.textContent = 'Choose your device on the download page, then enter the code in Join Room.';
+    }
+  </script>
+</body>
+</html>
